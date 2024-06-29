@@ -2,7 +2,7 @@
 
 ## Brave Browser
 
-(https://brave.com/linux/)
+https://brave.com/linux/
 
 ```bash
 sudo apt install curl
@@ -18,7 +18,7 @@ sudo apt install brave-browser
 
 ## GitHub CLI
 
-(https://github.com/cli/cli/blob/trunk/docs/install_linux.md)
+https://github.com/cli/cli/blob/trunk/docs/install_linux.md
 
 ```bash
 (type -p wget >/dev/null || (sudo apt update && sudo apt-get install wget -y)) \
@@ -35,12 +35,18 @@ sudo apt install brave-browser
 There are a number of programs that can be installed using the `apt` package manager.
 
 ```bash
-sudo apt install alacritty tmux vim neovim emacs bat ripgrep
+sudo apt install alacritty \
+    tmux \
+    vim \
+    neovim \
+    emacs \
+    bat \
+    ripgrep
 ```
 
 ## Rust
 
-(https://www.rust-lang.org/tools/install)
+https://www.rust-lang.org/tools/install
 
 ```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -48,7 +54,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 ## NVM
 
-(https://github.com/nvm-sh/nvm)
+https://github.com/nvm-sh/nvm
 
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
