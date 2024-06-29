@@ -71,3 +71,10 @@ brew install --cask \
     rectangle \
     vscodium
 ```
+
+## Neovim
+
+```bash
+gh repo clone george-greene/kickstart.nvim "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
+nvim
+```
