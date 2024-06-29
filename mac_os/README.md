@@ -92,3 +92,11 @@ https://github.com/nvm-sh/nvm
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 ```
+
+## Bun
+
+https://bun.sh/
+
+```bash
+curl -fsSL https://bun.sh/install | bash
+```
