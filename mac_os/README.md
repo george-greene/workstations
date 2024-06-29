@@ -23,11 +23,9 @@ brew install bash \
     haskell-stack \
     kubernetes-cli \
     neovim \
-    node \
     ocaml \
     pinentry-mac \
     podman \
-    rust \
     tmux
 ```
 
@@ -77,4 +75,20 @@ brew install --cask \
 ```bash
 gh repo clone george-greene/kickstart.nvim "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
 nvim
+```
+
+## Rust
+
+https://www.rust-lang.org/tools/install
+
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+## NVM
+
+https://github.com/nvm-sh/nvm
+
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 ```
