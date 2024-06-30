@@ -74,3 +74,31 @@ Then add to `~/.bashrc`:
 ```bash
 export PATH="$PATH:/opt/nvim-linux64/bin"
 ```
+
+## Proton
+
+### Mail & Calendar
+
+Download from website: https://proton.me/mail/download
+
+### Pass
+
+Download from website: https://proton.me/pass/download
+
+### VPN
+
+https://protonvpn.com/support/official-linux-vpn-ubuntu/
+
+```bash
+wget https://repo.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.3-3_all.deb
+
+sudo dpkg -i ./protonvpn-stable-release_1.0.3-3_all.deb && sudo apt update
+
+echo "de7ef83a663049b5244736d3eabaacec003eb294a4d6024a8fbe0394f22cc4e5  protonvpn-stable-release_1.0.3-3_all.deb" | sha256sum --check -
+
+sudo apt install proton-vpn-gnome-desktop
+
+sudo apt update && sudo apt upgrade
+
+sudo apt install libayatana-appindicator3-1 gir1.2-ayatanaappindicator3-0.1 gnome-shell-extension-appindicator
+```
