@@ -38,7 +38,6 @@ There are a number of programs that can be installed using the `apt` package man
 sudo apt install alacritty \
     tmux \
     vim \
-    neovim \
     emacs \
     bat \
     ripgrep
@@ -58,4 +57,20 @@ https://github.com/nvm-sh/nvm
 
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+```
+
+## Neovim
+
+APT has an out-of-date Neovim package, so install from releases on GitHub.
+
+```bash
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+sudo rm -rf /opt/nvim
+sudo tar -C /opt -xzf nvim-linux64.tar.gz
+```
+
+Then add to `~/.bashrc`:
+
+```bash
+export PATH="$PATH:/opt/nvim-linux64/bin"
 ```
