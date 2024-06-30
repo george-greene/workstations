@@ -1,5 +1,72 @@
 # Pop!_OS
 
+## Alacritty
+
+https://github.com/alacritty/alacritty/blob/master/INSTALL.md
+
+Install dependencies
+
+```bash
+sudo apt update
+
+sudo apt install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
+```
+
+Clone repository
+
+```bash
+gh repo clone alacritty/alacritty
+cd alacritty
+```
+
+Use Rust stable
+
+```bash
+rustup override set stable
+rustup update stable
+```
+
+Build
+
+```
+cargo build --release
+```
+
+Install terminfo
+```bash
+sudo tic -xe alacritty,alacritty-direct extra/alacritty.info
+```
+
+Desktop Entry
+
+```bash
+sudo cp target/release/alacritty /usr/local/bin # or anywhere else in $PATH
+sudo cp extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg
+sudo desktop-file-install extra/linux/Alacritty.desktop
+sudo update-desktop-database
+```
+
+Man Page
+
+```bash
+sudo apt install scdoc
+
+sudo mkdir -p /usr/local/share/man/man1
+sudo mkdir -p /usr/local/share/man/man5
+scdoc < extra/man/alacritty.1.scd | gzip -c | sudo tee /usr/local/share/man/man1/alacritty.1.gz > /dev/null
+scdoc < extra/man/alacritty-msg.1.scd | gzip -c | sudo tee /usr/local/share/man/man1/alacritty-msg.1.gz > /dev/null
+scdoc < extra/man/alacritty.5.scd | gzip -c | sudo tee /usr/local/share/man/man5/alacritty.5.gz > /dev/null
+scdoc < extra/man/alacritty-bindings.5.scd | gzip -c | sudo tee /usr/local/share/man/man5/alacritty-bindings.5.gz > /dev/null
+```
+
+Shell completions
+
+```bash
+mkdir -p ~/.bash_completion
+cp extra/completions/alacritty.bash ~/.bash_completion/alacritty
+echo "source ~/.bash_completion/alacritty" >> ~/.bashrc
+```
+
 ## Brave Browser
 
 https://brave.com/linux/
@@ -35,8 +102,7 @@ https://github.com/cli/cli/blob/trunk/docs/install_linux.md
 There are a number of programs that can be installed using the `apt` package manager.
 
 ```bash
-sudo apt install alacritty \
-    tmux \
+sudo apt install tmux \
     vim \
     emacs \
     bat \
