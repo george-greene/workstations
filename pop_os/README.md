@@ -168,3 +168,11 @@ sudo apt update && sudo apt upgrade
 
 sudo apt install libayatana-appindicator3-1 gir1.2-ayatanaappindicator3-0.1 gnome-shell-extension-appindicator
 ```
+
+## Haskell
+
+https://www.haskell.org/ghcup/
+
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+```
